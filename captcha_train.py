@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 from torch.autograd import Variable
 import my_dataset
-from captcha_cnn_model import CNN
+from captcha_cnn_model import *
 
 # Hyper Parameters
 num_epochs = 30
@@ -11,7 +11,7 @@ batch_size = 100
 learning_rate = 0.001
 
 def main():
-    cnn = CNN()
+    cnn = RES101()
     cnn.train()
     print('init net')
     criterion = nn.MultiLabelSoftMarginLoss()

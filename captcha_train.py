@@ -18,7 +18,7 @@ def main():
     optimizer = torch.optim.Adam(cnn.parameters(), lr=learning_rate)
 
     # Train the Model
-    train_dataloader = my_dataset.get_train_data_loader()
+    train_dataloader = my_dataset.get_train_data_loader(batch_size=batch_size)
     for epoch in range(num_epochs):
         for i, (images, labels) in enumerate(train_dataloader):
             images = Variable(images)
